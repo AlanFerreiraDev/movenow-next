@@ -64,38 +64,3 @@ a {
   display: flex;
   flex-direction: column;
 }
-
-/* Centralizar tudo da barra */
-.experience-bar {
-  display: flex;
-  align-items: center;
-}
-
-.experience-bar span {
-  font-size: 1 rem;
-}
-
-/* Para apenas 01 nível de filho, apenas a div dentro diretamente da classe */
-.experience-bar > div {
-  flex: 1; /* para ocupar a largura máxima do container */
-  height: 4px; /* tamanho fixo, pois está em px */
-  border-radius: 4px;
-  background: var(--gray-line);
-  margin: 0 1.5rem; /* 0 em cima e embaixo e 1.5rem nas laterais (20px) */
-  position: relative; /* pois dentro dela teremos um item composition absolute */
-}
-
-.experience-bar >div >div {
-  height: 4px;
-  border-radius: 4px;
-  background: var(--green);
-}
-
-span.current-experience {
-  position: absolute;
-  top: 12px;
-  /* Comentar o trasform e ver a diferença depois */
-  transform: translateX(-50%); /* Para deslocar no eixo X metade do span, então ele ficará na metade dele imediatamente */
-
-}
-
